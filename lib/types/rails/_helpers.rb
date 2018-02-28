@@ -25,6 +25,9 @@ class RDL::Rails
       return 'Time'
     when :datetime
       return 'DateTime'
+    when :inet
+      # PostgreSQL inet type
+      return 'String'
     else
       raise RuntimeError, "Unrecoganized column type #{rails_type}"
     end
